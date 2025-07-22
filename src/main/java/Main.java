@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("This is main class ... this statement is only to learn concept of branch in git...");
         LibraryService libraryService = new LibraryService();
         Scanner scanner = new Scanner(System.in);
         int choice;
