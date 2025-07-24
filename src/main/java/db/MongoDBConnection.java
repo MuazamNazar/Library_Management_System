@@ -20,6 +20,13 @@ public class MongoDBConnection{
         MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
         return database.getCollection(COLLECTION_NAME);
     }
+    public static MongoCollection<Document> getUserCollection(){
+        if (mongoClient == null){
+            mongoClient = MongoClients.create(connection_String);
+        }
+        MongoDatabase database = mongoClient.getDatabase(DATABASE_NAME);
+        return database.getCollection("users");
+    }
 
     //Connection Close...
     public static void close_connection(){
